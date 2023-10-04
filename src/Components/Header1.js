@@ -25,7 +25,7 @@ const navigations=[
 
 
 
-]
+];
 
 function Header1() {
   return (

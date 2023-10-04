@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Products from '../Components/Products';
+import ProductCard from './ProductCard';
 
 function CetagoriesProducts() {
     const name=useParams();
@@ -20,7 +21,7 @@ function CetagoriesProducts() {
     if (products.length===0) return <div>loading....</div>
   return (
     <div>
-      <Products products={products}/>
+      <ProductCard products={products}/>
     </div>
   )
 }
