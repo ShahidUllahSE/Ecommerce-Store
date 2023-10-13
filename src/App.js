@@ -9,6 +9,9 @@ import Products from './Components/Products';
 
 import Cart from './modules/Cart';
 import CetagoriesProducts from './modules/CetagoriesProducts';
+import ProductCard from './modules/ProductCard';
+import About from './Components/About';
+import Contact from './Components/Contact';
 
 function App() {
   return (
@@ -17,9 +20,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/products/:id" element={<SingleProduct/>} />
-        <Route path="/products" element={<Products/>} />
+        <Route path="/products" element={<ProductCard/>} />
         <Route path="/cetagories/:name" element={<CetagoriesProducts/>} />
-        <Route path="cart" element={<Cart/>} />
+        <Route path="/cart" element={<Cart/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<div>404</div>} />
       </Routes>
       <Footer/>

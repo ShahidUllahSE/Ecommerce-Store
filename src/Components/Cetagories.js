@@ -22,7 +22,7 @@ function Cetagories() {
 
   return (
     
-        <Features cards={cetagory}/>
+        <Features card={cetagory}/>
       
   )
 }

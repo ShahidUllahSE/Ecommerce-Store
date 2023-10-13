@@ -19,6 +19,7 @@ function CetagoriesProducts() {
     ,[])
 
     if (products.length===0) return <div>loading....</div>
+    else
   return (
     <div>
       <ProductCard products={products}/>

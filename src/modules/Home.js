@@ -10,7 +10,7 @@ function Home() {
   useEffect(()=>{
     const fetchProducts=async()=>{
 
-     const response= await fetch('https://fakestoreapi.com/products?limit=12')
+     const response= await fetch('https://fakestoreapi.com/products?limit=8')
            const data= await response.json()
             console.log(data);
             setProducts(data);
@@ -36,7 +36,7 @@ function Home() {
     
    <Products/>
 
-   <Statis/>
+   {/* <Statis/> */}
 
     </div>
   )
