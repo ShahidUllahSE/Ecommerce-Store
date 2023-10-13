@@ -12,6 +12,7 @@ import CetagoriesProducts from './modules/CetagoriesProducts';
 import ProductCard from './modules/ProductCard';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import AddToCart from './modules/AddToCart';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/cart" element={<Cart/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/AddToCart" element={<AddToCart/>} />
         <Route path="*" element={<div>404</div>} />
       </Routes>
       <Footer/>
