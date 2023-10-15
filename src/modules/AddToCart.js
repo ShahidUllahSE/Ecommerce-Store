@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const AddToCart = () => {
   const navigate = useNavigate();
   const [total, setTotal] = useState(0);
-  const carts = JSON.parse(localStorage.getItem("cart")) || [];
+  const carts = JSON.parse(localStorage.getItem("AddToCart")) || [];
 
   useEffect(() => {
     const total = carts.reduce((acc, item) => {
@@ -23,8 +23,8 @@ const AddToCart = () => {
       }
       return item;
     });
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    navigate("/cart");
+    localStorage.setItem("AddToCart", JSON.stringify(updatedCart));
+    navigate("/AddToCart");
   };
 
   const handleDec = (id) => {
@@ -37,14 +37,14 @@ const AddToCart = () => {
       }
       return item;
     });
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    navigate("/cart");
+    localStorage.setItem("AddToCart", JSON.stringify(updatedCart));
+    navigate("/AddToCart");
   };
 
   const removeProduct = (id) => {
     const updatedCart = carts.filter((item) => item.id !== id);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    navigate("/cart");
+    localStorage.setItem("AddToCart", JSON.stringify(updatedCart));
+    navigate("/AddToCart");
   };
 
   if (carts.length === 0) {

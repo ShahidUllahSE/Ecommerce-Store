@@ -1,8 +1,9 @@
 import React from "react";
-import { Navigate, json, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function SingleProduct() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState({});
   console.log(id, 'id', product);
@@ -17,6 +18,7 @@ function SingleProduct() {
   }, []);
 
   const handleCart = (product,redirect) => {
+    const quantity=0;
     const AddToCart = JSON.parse(localStorage.getItem('AddToCart') || '[]'); // Provide a default value of an empty array if the JSON is empty
     const isProductExist = AddToCart.find(item => item.id === product.id);
     if (isProductExist) {
@@ -36,7 +38,7 @@ function SingleProduct() {
     }
     // alert("Product Added to cart")
     if(redirect){
-      Navigate('/AddToCart')
+      navigate('/AddToCart')
     }
 }
 
