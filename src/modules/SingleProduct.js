@@ -18,16 +18,16 @@ function SingleProduct() {
   }, []);
 
   const handleCart = (product,redirect) => {
-    const quantity=0;
     const AddToCart = JSON.parse(localStorage.getItem('AddToCart') || '[]'); // Provide a default value of an empty array if the JSON is empty
     const isProductExist = AddToCart.find(item => item.id === product.id);
     if (isProductExist) {
-        const updatedCart = AddToCart.map(item => {
-            if (item.id === product.id) {
-                return {
-                    ...item,
-                    quantity: item.quantity + 1
-                };
+      const updatedCart = AddToCart.map(item => {
+        if (item.id === product.id) {
+         
+          return {
+            ...item,
+            quantity: item.quantity + 1
+          };
             }
             return item;
         });

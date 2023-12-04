@@ -20,10 +20,8 @@ const About = () => {
               individuality..
             </p>
             <div class="flex md:mt-4 mt-6">
-              <button class="inline-flex text-white bg-green-500 border-0 py-1 px-4 focus:outline-none hover:bg-green-600 rounded">
-                Button
-              </button>
-              <a class="text-green-500 inline-flex items-center ml-4">
+          
+              <a class="text-green-500 inline-flex items-center ml-4 cursor-pointer">
                 Learn More
                 <svg
                   fill="none"
