@@ -6,7 +6,7 @@ import Hero from '../../components/Hero';
 import ProductCard from '../../components/ProductCard';
 import Products from '../../components/ProductCard';
 import Stats from '../../components/StatCard';
-
+ 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
